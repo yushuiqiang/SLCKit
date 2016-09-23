@@ -1,0 +1,10 @@
+﻿#ifndef SLCKIT_GLOBAL_H
+#define SLCKIT_GLOBAL_H
+
+#if defined(SLCKIT_LIBRARY)
+#  define SLCKIT_EXPORT Q_DECL_EXPORT
+#else
+#  define SLCKIT_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // SLCKIT_GLOBAL_H

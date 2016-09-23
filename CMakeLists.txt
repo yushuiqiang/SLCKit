@@ -1,0 +1,11 @@
+project(SLCKit)
+cmake_minimum_required(VERSION 2.8)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+add_definitions(-DSLCKIT_LIBRARY)
+include_directories(./include)
+aux_source_directory(./src SRC_LIST)
+add_library(${PROJECT_NAME} SHARED ${SRC_LIST})
+
+set(CMAKE_AUTOMOC ON)
+find_package ( Qt5Core REQUIRED )
+target_link_libraries ( ${PROJECT_NAME} Qt5::Core)
