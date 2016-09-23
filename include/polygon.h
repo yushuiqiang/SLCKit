@@ -49,7 +49,10 @@ private:
     PolygonType m_type = Contour;
 };
 
+SLCKIT_EXPORT QDebug operator << (QDebug dbg, const Polygon &point);
 SLCKIT_EXPORT QDataStream &operator << (QDataStream &stream, const Polygon &polygon);
 SLCKIT_EXPORT QDataStream &operator >> (QDataStream &stream, Polygon &polygon);
+
+Q_DECLARE_METATYPE (Polygon)
 
 #endif // POLYGON_H

@@ -40,9 +40,6 @@ public:
     void setHeight (const qreal height);
     qreal height () const;
 
-    const Layer offsetted (const qreal delta) const;
-    void offset (const qreal delta);
-
     const Layer translated (const Point &offset) const;
     void translate (const Point &offset);
 
@@ -74,7 +71,6 @@ private:
 };
 
 SLCKIT_EXPORT QDebug operator << (QDebug dbg, const Layer &layer);
-
 SLCKIT_EXPORT QDataStream &operator << (QDataStream &stream, const Layer &layer);
 SLCKIT_EXPORT QDataStream &operator >> (QDataStream &stream, Layer &layer);
 

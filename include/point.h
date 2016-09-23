@@ -59,7 +59,6 @@ SLCKIT_EXPORT const Point operator/ (const Point &p, const qreal scale);
 SLCKIT_EXPORT const Point operator/ (const Point &p, const Point &q);
 
 SLCKIT_EXPORT QDebug operator << (QDebug dbg, const Point &point);
-
 SLCKIT_EXPORT QDataStream &operator << (QDataStream &stream, const Point &p);
 SLCKIT_EXPORT QDataStream &operator >> (QDataStream &stream, Point &p);
 
